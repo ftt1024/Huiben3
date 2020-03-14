@@ -64,13 +64,13 @@ public class DummyContent {
         public final String id;
         public final String content;
         public final String details;
-        public final List<Page> pathes;
+        public final List<Page> paths;
 
         public DummyItem(String id, String content, String details) {
             this.id = id;
             this.content = content;
             this.details = details;
-            this.pathes = null;
+            this.paths = null;
         }
 
         @Override
@@ -83,7 +83,7 @@ public class DummyContent {
             this.id = ""+position;
             this.content = book.getName();
             this.details = folderScanService.getBook(book).getPageList().toString();
-            this.pathes = folderScanService.getBook(book).getPageList();
+            this.paths = folderScanService.getBook(book).getPageList();
         }
     }
 }

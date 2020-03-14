@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="0px"
+    android:layout_marginLeft="0px"
+    android:layout_marginTop="0px"
+    android:layout_marginRight="0px"
+    android:layout_marginBottom="0px"
     android:fitsSystemWindows="true"
+    android:padding="0px"
+    android:paddingLeft="0px"
+    android:paddingTop="0px"
+    android:paddingRight="0px"
+    android:paddingBottom="0px"
     tools:context=".ItemDetailActivity"
-    tools:ignore="MergeRootFrame">
+    tools:ignore="MergeRootFrame"
+    android:orientation="horizontal">
 
-    <!--<android.support.design.widget.AppBarLayout
+    <!--
+    <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
@@ -33,14 +46,25 @@
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
-    </android.support.design.widget.AppBarLayout>-->
-
-    <android.support.v4.widget.NestedScrollView
+    </android.support.design.widget.AppBarLayout>
+-->
+<!--    <android.support.v4.widget.NestedScrollView
         android:id="@+id/item_detail_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:padding="0px"
+        android:paddingLeft="0px"
+        android:paddingTop="0px"
+        android:paddingRight="0px"
+        android:paddingBottom="0px" />-->
+    <FrameLayout
+        android:id="@+id/item_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/item_detail_image_switcher" />
+    </FrameLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -48,8 +72,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|start"
         android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="#8BC34A"
         app:layout_anchor="@+id/item_detail_container"
         app:layout_anchorGravity="top|end"
-        app:srcCompat="@android:drawable/stat_notify_chat" />
+        app:srcCompat="@android:drawable/ic_menu_upload" />
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
